@@ -1,14 +1,22 @@
+<!-- Home.vue -->
 <template>
-  <h2>Home</h2>
-  <p>Contenido de la página principal</p>
+  <div>
+    <h2>Home</h2>
+    <p>Contingut de la pàgina principal</p>
+
+    <!-- Afegim un botó que farà la navegació programàtica -->
+    <button @click="navigateToAbout">Anar a About</button>
+  </div>
 </template>
 
 <script>
 export default {
-  name:'Home'
-}
+  methods: {
+    // Mètode per fer la navegació programàtica
+    navigateToAbout() {
+      // Utilitzem router.push per navegar a la ruta /about
+      this.$router.push('/about');
+    },
+  },
+};
 </script>
-
-<style>
-
-</style>
