@@ -13,7 +13,15 @@ import Home from '../components/Home'
      name: 'about',
      component: () => import(/* webpackChunkName: "about" */ '../components/About')
  }
+
+ ,
+ {
+    path: '/:pathMatch(.*)*',
+    component: () => import(/* webpackChunkName: "NoPageFound"*/'../components/404')
+ }
  ]
+
+
 
  const router = createRouter({
  history: createWebHistory(process.env.BASE_URL),
